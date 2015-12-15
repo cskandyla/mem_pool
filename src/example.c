@@ -16,6 +16,11 @@ int main(int argc,char *argv[])
   char *s=mem_pool_alloc(&p);
   strcpy(s,"hiz");
   printf("%s\n",s);
+  mem_pool_free(&p,d);
+  mem_pool_free(&p,f);
+  mem_pool_free(&p,s);
+  mem_pool_destroy(&p);
+  
   
   return 0;
 }
